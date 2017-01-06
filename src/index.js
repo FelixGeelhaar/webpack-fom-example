@@ -1,4 +1,5 @@
-require('../style/main.css');
+import '../style/main.css';
 
-const imageComponent = require('./image-component');
+import imageComponent from './image-component';
+
 imageComponent();
