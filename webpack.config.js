@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+// Check if the environment variable of NODE_ENV is set to Production
+// Could be done through webpack -p or NODE_ENV=production webpack
 const isProduction = process.env.NODE_ENV === 'production';
 
 const config = {
