@@ -1,0 +1,20 @@
+{
+  "name": "webpack-fom-example",
+  "version": "0.0.1",
+  "description": "Webpack Example for a FOM scientific paper",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "start": "npm run clean && webpack"
+  },
+  "author": "Felix Geelhaar <felix@felixgeelhaar.de>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-env": "^1.1.5",
+    "html-webpack-plugin": "^2.26.0",
+    "rimraf": "^2.5.4",
+    "webpack": "^2.2.0-rc.3"
+  }
+}
