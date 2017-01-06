@@ -16,9 +16,10 @@ const config = {
     rules: [
       {
         loader: ExtractTextPlugin.extract({
-          loader: 'css-loader'
+          fallbackLoader: 'style-loader',
+          loader: ['css-loader', 'sass-loader']
         }),
-        test: /\.css$/
+        test: /\.((s(a|c)ss)|css)$/ // matches sass, scss or css
       },
       {
         use: 'babel-loader',
