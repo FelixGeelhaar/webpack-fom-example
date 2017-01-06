@@ -13,8 +13,10 @@
     "babel-core": "^6.21.0",
     "babel-loader": "^6.2.10",
     "babel-preset-env": "^1.1.5",
+    "css-loader": "^0.26.1",
     "html-webpack-plugin": "^2.26.0",
     "rimraf": "^2.5.4",
+    "style-loader": "^0.13.1",
     "webpack": "^2.2.0-rc.3"
   }
 }

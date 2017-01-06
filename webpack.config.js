@@ -2,15 +2,22 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
-  context: path.resolve(__dirname, 'src'),
-  entry: './index.js',
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
+  module: {
+    rules: [
+      {
+        use: ['style-loader', 'css-loader'],
+        test: /\.css$/
+      }
+    ]
+  },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.ejs',
+      template: './src/index.ejs',
       title: 'Webpack FOM Example'
     })
   ]
