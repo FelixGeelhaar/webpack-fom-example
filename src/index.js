@@ -1,5 +1,4 @@
-const image = document.createElement('img');
-image.src = 'http://lorempixel.com/400/400';
+require('../style/main.css');
 
-const container = document.getElementById('container');
-container.appendChild(image);
+const imageComponent = require('./image-component');
+imageComponent();
