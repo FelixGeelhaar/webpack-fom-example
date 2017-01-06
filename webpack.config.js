@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const config = {
   entry: './src/index.js',
@@ -10,7 +11,9 @@ const config = {
   module: {
     rules: [
       {
-        use: ['style-loader', 'css-loader'],
+        loader: ExtractTextPlugin.extract({
+          loader: 'css-loader'
+        }),
         test: /\.css$/
       }
     ]
@@ -19,7 +22,8 @@ const config = {
     new HtmlWebpackPlugin({
       template: './src/index.ejs',
       title: 'Webpack FOM Example'
-    })
+    }),
+    new ExtractTextPlugin('style.css')
   ]
 };
 
