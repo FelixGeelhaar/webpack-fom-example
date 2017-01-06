@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 const config = {
   entry: './src/index.js',
   output: {
@@ -28,7 +30,15 @@ const config = {
       template: './src/index.ejs',
       title: 'Webpack FOM Example'
     }),
-    new ExtractTextPlugin('style.css')
+    new ExtractTextPlugin('style.css'),
+    // Production configuration
+    isProduction ?
+      new webpack.optimize.UglifyJsPlugin({
+        warning: false,
+        screwie: true,
+        comment: false,
+        compress: true
+      }) : () => {}
   ]
 };
 
