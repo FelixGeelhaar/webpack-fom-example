@@ -9,7 +9,7 @@
   For each section is a separate branch. The interesting changes are happening in the webpack.config.js file. To see the webpack config in action you should run **npm run start** on a terminal to see webpack in action.
   
 ## Contact information ##
-For any question or feedback please contact [Felix Geelhaar (privat)](mailto:felix@felixgeelhaar.de "Contact the author") or [Felix Geelhaar (Universtity)](mailto:felix.geelhaar@fom-net.de "Contact the author")
+For any question or feedback please contact [Felix Geelhaar (privat)](mailto:felix@felixgeelhaar.de "Contact the author") or [Felix Geelhaar (University)](mailto:felix.geelhaar@fom-net.de "Contact the author")
 
 - - -
 &copy; 2017 Felix Geelhaar
