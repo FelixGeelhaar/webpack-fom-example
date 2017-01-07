@@ -20,7 +20,7 @@ const config = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js'
+    filename: '[name].[chunkhash].js'
   },
   module: {
     rules: [
@@ -62,18 +62,20 @@ const config = {
       template: './index.ejs',
       title: 'Webpack FOM Example'
     }),
-    new ExtractTextPlugin('style.css'),
+    new ExtractTextPlugin('style.[chunkhash].css'),
     new webpack.optimize.CommonsChunkPlugin({
       name: ['vendor', 'manifest']
     }),
     // Production configuration
     isProduction ?
-      new webpack.optimize.UglifyJsPlugin({
+      (new webpack.optimize.UglifyJsPlugin({
         warning: false,
         screwie: true,
         comment: false,
         compress: true
-      }) : () => {}
+      }),
+      new webpack.optimize.DedupePlugin()
+    ) : () => {}
   ]
 };
 
