@@ -1,5 +1,17 @@
-import '../style/main.scss';
+import React from 'react';
+import { render } from 'react-dom';
+import { Router, hashHistory } from 'react-router';
 
-import imageComponent from './image-component';
+import Container from './Layout/container';
+import Home from './Home';
 
-imageComponent();
+const routes = {
+  path: "/",
+  component: Container,
+  indexRoute: { component: Home }
+};
+
+render(
+  <Router history={hashHistory} routes={routes} />,
+  document.getElementById('root')
+);

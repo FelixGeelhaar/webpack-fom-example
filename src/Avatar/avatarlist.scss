@@ -1,0 +1,23 @@
+#avatars {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+
+  h2 {
+    font-family: 'Roboto-Light';
+  }
+
+  img {
+    height: 200px;
+    width: auto;
+    margin: 2px;
+  }
+}
+
+#avatarlist {
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: center;
+  text-align: center;
+}

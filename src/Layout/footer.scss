@@ -1,0 +1,21 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #00ae9e;
+  color: #fff;
+  height: 45px;
+  width: 100%;
+
+  font-family: 'Roboto-Thin';
+  font-size: 0.8rem;
+
+  position: fixed;
+  bottom: 0;
+
+  img {
+    height: 45px;
+    width: auto;
+  }
+}

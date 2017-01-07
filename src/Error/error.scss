@@ -1,0 +1,17 @@
+#error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: red;
+  justify-content: center;
+  margin: 25px 0;
+
+  b {
+    font-family: 'Roboto-Bold';
+  }
+
+  img {
+    height: 350px;
+    width: auto;
+  }
+}

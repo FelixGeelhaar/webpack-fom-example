@@ -1,0 +1,22 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #00ae9e;
+  height: 50px;
+  width: 100%;
+
+  font: 1.5rem Helvetica, Arial, sans-serif;
+  color: #fff;
+
+  img {
+    height: 50px;
+    width: auto;
+    margin: 0 15px;
+  }
+
+  h2 {
+    font: 1.4rem Roboto-Bold;
+  }
+}
