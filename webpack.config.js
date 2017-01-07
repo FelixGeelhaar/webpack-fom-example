@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -65,6 +66,23 @@ const config = {
     new ExtractTextPlugin('style.[chunkhash].css'),
     new webpack.optimize.CommonsChunkPlugin({
       name: ['vendor', 'manifest']
+    }),
+    new FaviconsWebpackPlugin({
+      logo: '../assets/images/electrocat.png',
+      persistentCache: true,
+      inject: true,
+      icons: {
+        android: true,
+        appleIcon: true,
+        appleStartup: true,
+        coast: false,
+        favicons: true,
+        firefox: true,
+        opengraph: false,
+        twitter: false,
+        yandex: false,
+        windows: false
+      }
     }),
     // Production configuration
     isProduction ?
